@@ -5,6 +5,7 @@ const cors = require('cors')
 
 app.use(express.json())
 app.use(cors())
+app.use(express.static('build'))
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :data'))
 
 morgan.token('data', (request) => request.method === 'POST' ? JSON.stringify(request.body) : ' ')
@@ -90,7 +91,7 @@ app.get('/api/notes/:id', (request, response) => {
   }
 })
 
-// mikä tässä onß
+// mikä tässä onß täh
 app.delete('/api/notes/:id', (request, response) => {
   const id = Number(request.params.id)
   notes = notes.filter(note => note.id !== id)
