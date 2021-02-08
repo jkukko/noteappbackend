@@ -1,0 +1,29 @@
+{
+  "name": "noteappbackend",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "\"No test\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkukko/noteappbackend.git"
+  },
+  "author": "Joonas Kukkonen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jkukko/noteappbackend/issues"
+  },
+  "homepage": "https://github.com/jkukko/noteappbackend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
