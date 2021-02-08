@@ -6,7 +6,11 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test": "\"No test\""
+    "test": "\"No test\"",
+    "build:ui": "rm -rf build && cd ../noteapp_front && npm run build --prod && cp -r build ../noteappbackend",
+    "deploy": "git push heroku main",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push && npm run deploy",
+    "logs:prod": "heroku logs --tail"
   },
   "repository": {
     "type": "git",
