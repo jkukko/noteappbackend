@@ -29,7 +29,8 @@ app.post('/api/notes', (request, response) => {
     date: new Date(),
   })
 
-  console.log(note)
+  console.log("New note: ", note)
+
   note.save().then(savedNote => {
     response.json(savedNote.toJSON())
   })
