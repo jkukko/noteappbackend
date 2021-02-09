@@ -18,6 +18,7 @@ app.get('/api/notes', (request, response) => {
 app.post('/api/notes', (request, response) => {
   const body = request.body
 
+
   if (body.content === undefined) {
     return response.status(400).json({ error: 'content missing' })
   }
@@ -28,6 +29,7 @@ app.post('/api/notes', (request, response) => {
     date: new Date(),
   })
 
+  console.log(note)
   note.save().then(savedNote => {
     response.json(savedNote.toJSON())
   })
